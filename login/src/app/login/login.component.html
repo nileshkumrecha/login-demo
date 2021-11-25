@@ -1,0 +1,17 @@
+
+  <div class="row offset-3 col-5 inside-container">
+    <div class="row col-12 mt-5">
+      <div class="row offset-6 mb-3 input-group">
+        <input type="text" class="form-control" [(ngModel)]="userName" placeholder="Email / Mobile Number">
+      </div>
+      <div class="row offset-6 mb-3 password-field input-group">
+        <input type="password" class="form-control" (keyup.enter)="login()" [(ngModel)]="password" placeholder="Password" minlength="4" maxlength="10">
+      </div>
+
+    </div>
+    <div class="row offset-6 mt-5 mb-5">
+      <button type="button" [disabled]="!userName || !password" class="btn login-button" (click)="login()">Login</button>
+      <a type="button" class="btn" [routerLink]="['/create']">Create User</a>
+      <a type="button" class="btn" [routerLink]="['/forgot-password']">Forgot Password</a>
+    </div>
+  </div>
